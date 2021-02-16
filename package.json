@@ -1,0 +1,20 @@
+{
+  "name": "bowling-game",
+  "version": "1.0.0",
+  "description": "Bowl and Enjoy",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "dev": "nodemon ./app/index.js localhost 3000",
+    "test": "mocha"
+  },
+  "author": "Varinderjit Kaur",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.16",
+    "@babel/register": "^7.12.13",
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
