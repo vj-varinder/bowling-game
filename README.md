@@ -4,6 +4,7 @@ Calculates the total number of scores depending upon the number of pins knocked 
 ---
 ## Installation
  - git clone https://github.com/vj-varinder/bowling-game.git
+ - `cd bowling-game`
  - `npm install`
  - `npm test`
 
