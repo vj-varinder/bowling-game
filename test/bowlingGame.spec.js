@@ -26,8 +26,8 @@ describe('Bowling Game', function () {
         it('should score 0', function () {
             rollMany.call(this.bowlingGame, 20, 0);
 
-            let expected = 0;
-            let actual = this.bowlingGame.score();
+            const expected = 0;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -37,8 +37,8 @@ describe('Bowling Game', function () {
         it('should score 20', function () {
             rollMany.call(this.bowlingGame, 20, 1);
 
-            let expected = 20;
-            let actual = this.bowlingGame.score();
+            const expected = 20;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -51,8 +51,8 @@ describe('Bowling Game', function () {
             this.bowlingGame.roll(5);
             rollMany.call(this.bowlingGame, 17, 0)
             
-            let expected = 20;
-            let actual = this.bowlingGame.score();
+            const expected = 20;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -66,8 +66,8 @@ describe('Bowling Game', function () {
             this.bowlingGame.roll(3);
             rollMany.call(this.bowlingGame, 16, 0)
 
-            let expected = 26;
-            let actual = this.bowlingGame.score();
+            const expected = 26;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -79,8 +79,8 @@ describe('Bowling Game', function () {
             this.bowlingGame.roll(5);
             this.bowlingGame.roll(5);
 
-            let expected = 10;
-            let actual = this.bowlingGame.score();
+            const expected = 10;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -92,8 +92,8 @@ describe('Bowling Game', function () {
             this.bowlingGame.roll(5);
             this.bowlingGame.roll(5);
 
-            let expected = 10;
-            let actual = this.bowlingGame.score();
+            const expected = 10;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -106,8 +106,8 @@ describe('Bowling Game', function () {
             this.bowlingGame.roll(5);
             this.bowlingGame.roll(5);
 
-            let expected = 20;
-            let actual = this.bowlingGame.score();
+            const expected = 20;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
@@ -119,8 +119,8 @@ describe('Bowling Game', function () {
             this.bowlingGame.roll(5);
             this.bowlingGame.roll(4);
 
-            let expected = 28;
-            let actual = this.bowlingGame.score();
+            const expected = 28;
+            const actual = this.bowlingGame.score();
 
             expect(actual).to.equal(expected);
         });
