@@ -2,15 +2,24 @@
 Calculates the total number of scores depending upon the number of pins knocked down in each roll. 
 
 ---
+## Tech Used
+JavaScript | Node.js (v15.5.1)
+
+### Instructions to install Node.js
+ - Download installer from https://nodejs.org/en/download/current/ to install on windows OS or MacOS.
+ - Verify installation by entering `node -v` in the terminal.
+
+---
 ## Installation
  - git clone https://github.com/vj-varinder/bowling-game.git
  - `cd bowling-game`
  - `npm install`
  - `npm test`
 
----
-## Tech Used
-JavaScript
+![bowling-game test cases output](./docs/img/test-cases-output.png)
+
+ ## To execute
+ - `npm run dev`
 
 ---
 ## Features
