@@ -1,6 +1,8 @@
 ## Bowling Game
 Calculates the total number of scores depending upon the number of pins knocked down in each roll. 
 
+![bowling-game valid game output](./docs/img/valid-game-output.png)
+
 ---
 ## Tech Used
 JavaScript | Node.js (v15.5.1)
@@ -27,6 +29,8 @@ JavaScript | Node.js (v15.5.1)
 The features on the system are:
 
 * One player only
+* There are 10 pins in a frame
+* There are 10 frames in a match
 * In each frame, the bowler has 2 tries to knock down all the pins
 * If in 2 tries, the bowler fails to knock down all the pins, their score is the sum of the number of pins they've knocked down in the 2 attempts
 
@@ -45,6 +49,3 @@ Their score is 20. So that's (4 + 6 + 5) + (5 + 0)
 E.g, if a bowler rolls, 10 | 5, 4
 
 Their score is 28. So that's (10 + 5 + 4) + ( 5 + 4)
-
-* There are 10 pins in a frame
-* There are 10 frames in a match
