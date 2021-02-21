@@ -1,10 +1,13 @@
 // Bowling Game
-export default function () {
-    
+module.exports = function () {
+    // Number of frames in a game
     this.noOfFrames = 10;
+    // Number of pins in a game
     this.totalNoOfPins = 10;
+    // this.allRolls will have number of pins knocked in all rolls in each game.
     this.allRolls = [];
 
+    // Recording number of pins knocked in each roll
     this.roll = function (noOfPinsKnocked) {
         if (typeof noOfPinsKnocked !== 'number') {
             throw new Error('Expected a number');
@@ -12,19 +15,22 @@ export default function () {
         this.allRolls.push(noOfPinsKnocked)
     };
 
+    // Calculated the score
     this.score = function () {
         let score = 0;
         let rollNumber = 0;
         let frameNumber = 0;
 
-        // Calculating scores for each frame till the 9th Frame
+        // Calculating scores for each frame till the 9th Frame if rolls exist
         for (frameNumber; frameNumber < this.noOfFrames - 1 && rollNumber + 1 < this.allRolls.length; frameNumber++) {
+            // Check for Strike
             if (this.isStrike(rollNumber)) {
                 score += this.strikeScore(rollNumber);
                 rollNumber++;
                 continue;
             } 
             let frameScore = this.allRolls[rollNumber] + this.allRolls[rollNumber + 1]; 
+            // Check for Spare
             if (this.isSpare(frameScore)) {
                 score += this.spareScore(rollNumber);
             } else {
