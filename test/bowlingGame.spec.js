@@ -73,7 +73,7 @@ describe('Bowling Game', function () {
         });
     });
 
-    describe('Game: only last frame have spare', function () {
+    describe('Game: only last frame have spare, 5, 5', function () {
         it('should score 10', function () {
             rollMany.call(this.bowlingGame, 18, 0);
             this.bowlingGame.roll(5);
@@ -99,7 +99,7 @@ describe('Bowling Game', function () {
         });
     });
 
-    describe('Game: when 6th frame has spare and 7th frames only first has performed', function () {
+    describe('Game: when 6th frame has spare and only 1 more roll has been performed, 10 | 0', function () {
         it('should score 10', function () {
             rollMany.call(this.bowlingGame, 10, 0);
             this.bowlingGame.roll(5);
@@ -126,4 +126,17 @@ describe('Bowling Game', function () {
         });
     });
 
+    describe('Game: when string type parameter is provided to rolls() function', function () {
+        it('should throw "Expected a number" exception', function () {
+
+            const expected = 'Expected a number';
+            const module1 = function () {
+                this.bowlingGame.roll('10');
+            };
+
+            expect(module1.bind(this)).to.throw(expected);
+
+        });
+    });
+    
 });
