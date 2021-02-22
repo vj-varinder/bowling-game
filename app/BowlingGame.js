@@ -10,7 +10,7 @@ module.exports = function () {
     // Recording number of pins knocked in each roll
     this.roll = function (noOfPinsKnocked) {
         if (typeof noOfPinsKnocked !== 'number') {
-            throw new Error('Expected a number');
+            throw 'Expected a number';
         }
         this.allRolls.push(noOfPinsKnocked)
     };
